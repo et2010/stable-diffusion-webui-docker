@@ -24,6 +24,8 @@ services:
     profiles: ["download"]
     volumes:
       - *v1
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   auto: &automatic
     <<: *base_service
